@@ -9,7 +9,7 @@ import java.util.HashMap;
  * 链接：https://leetcode-cn.com/problems/two-sum
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
-public class TwoSum {
+public class _1_TwoSum {
     /**
      * 自己写  暴力枚举法，主要思路是：取数组中的元素与其他元素进行相加，判断两数之和是否为目标值
      * 时间复杂度： 该方法中有嵌套循环，时间复杂度为O(n^2)
