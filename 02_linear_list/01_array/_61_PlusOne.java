@@ -19,4 +19,26 @@
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class _61_PlusOne {
+    /**
+     * 注意两种情况
+     * 1.末位是9的，要求进位的情况。
+     * 2.末位非9
+     * @param digits 目标数组
+     * @return 返回的数字
+     */
+    public int[] plusOne(int[] digits) {
+        //倒着遍历
+        for (int i = digits.length - 1; i >= 0; i--) {
+            //如论如何都要加一
+            digits[i]++;
+            //判断是否加后为10的倍数
+            digits[i]=digits[i]%10;
+            if(digits[i]%10!=0)
+                return digits;//不是10的倍数，直接返回结果，结束方法
+        }
+        //若是10的倍数才会走到这一步，数组大小加一
+        digits=new int[digits.length+1];
+        digits[0]=1;
+        return digits;
+    }
 }

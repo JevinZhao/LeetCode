@@ -37,7 +37,7 @@ public class _1_TwoSum {
 
     /**
      * 哈希表法，空间换时间，一次遍历数组，每遍历一个元素都计算待匹配的值，判断Map中是否存在待匹配的值，
-     * 不满足条件的元素存入Map中，元素值为key，下标为value，满足条件的直接输出两个键值对的value
+     *  ※ 不满足条件的元素存入Map中，元素值为key，下标为value，满足条件的直接输出两个键值对的value
      * 时间复杂度：一次遍历，时间复杂度为O(n)
      * 空间复杂度：O(n),最坏情况下要存n个键值对
      *
@@ -56,7 +56,7 @@ public class _1_TwoSum {
             if (hashMap.containsKey(another)) {
                 return new int[]{i, hashMap.get(another)};
             }
-            //不存在就将该元素存入Map中
+            //将该元素存入Map中
             hashMap.put(nums[i], i);
         }
         return new int[]{0};
