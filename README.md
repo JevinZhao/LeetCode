@@ -1,3 +1,3 @@
 # LeetCode
 Record of LeetCode
-做实验
+按照基本数据结构来分类
