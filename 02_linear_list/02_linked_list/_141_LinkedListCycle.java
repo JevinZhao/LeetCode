@@ -1,3 +1,5 @@
+import java.util.HashSet;
+
 /**
  * 141. 环形链表
  * 给定一个链表，判断链表中是否有环。
@@ -12,4 +14,29 @@
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  */
 public class _141_LinkedListCycle {
+    /**
+     * 思路： 遍历链表，判断链表的next指针的指向  ×
+     * 怎么表示呢？
+     * 官方：
+     * 可以使用哈希表来存储所有已经访问过的节点。每次我们到达一个节点，如果该节点已经存在于哈希表中，则说明该链表是环形链表，
+     * 否则就将该节点加入哈希表中。重复这一过程，直到我们遍历完整个链表即可
+     * 反思：
+     * 没有面向对象的思维，把链表视为一个对象，不用关注其它细节
+     */
+    public boolean hasCycle(ListNode head) {
+        HashSet<ListNode> listNodes = new HashSet<>();
+        //链表遍历，判断节点的下一节点是否为空
+        if (head != null) {
+            while (head.next != null) {
+                //判断哈希表中是否包含此节点
+                if (listNodes.contains(head)) {
+                    return true;
+                } else {
+                    listNodes.add(head);
+                    head=head.next;//这一步，蛮重要
+                }
+            }
+        }
+        return false;
+    }
 }
