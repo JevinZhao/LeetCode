@@ -7,7 +7,7 @@
  * <p>
  * 两个数的 最大公约数 是可以被两个数字整除的最大正整数。
  */
-public class _20240105_2807_InsertGreatestCommonDivisors {
+public class _20240106_2807_InsertGreatestCommonDivisors {
 
     /**
      * 思路：模拟插入过程
